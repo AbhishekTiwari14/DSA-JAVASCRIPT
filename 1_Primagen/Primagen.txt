@@ -1,1 +1,92 @@
-Hello
+ARRAYS: contguous memory block 
+const a = [] is an arrayList(which may fundamentally be stored as array) & is not interpreted as an array, bcoz we cannot apply in-built array methods on them 
+
+Binary Search: Applied on sorted array
+TC = O(log N) bcoz N/2^k = 1 => k = TC = Log(N)
+code: function binarySearch(arr, s, e){ //s = 0, e = n-1 initially
+    while(e>s){
+        mid = Math.floor(s + (e-s)/2);
+        if(value === arr[mid]) return mid;
+        if(value > arr[mid]) s = mid+1;
+        else e = mid;
+    } 
+}
+
+SORTING:
+Bubble Sort: Swap Adjacents; 1st loop(0 to n-1) places largest element at last index, 2nd loop(0 to n-2) places 2nd largest element at 2nd last index(n-2th index) and so on..., 
+TC = O(n^2)  
+code: 
+    function bubbleSort(arr){
+        const n = arr.length;
+        for(let i=0; i<n; i++){
+            for(let j=i; j<n-1-i; j++){
+                if(arr[j]>arr[j+1]){
+                    swap(arr[j], arr[j+1]);
+                }
+            }
+        }
+    }
+
+    function swap(a,b){
+        const temp = a;
+        a = b;
+        b = temp;
+    }
+
+......................................................
+
+LINKED LIST: non-contiguous memory blocks/nodes with prev node connected to fwd node bcoz prev node stores data + address of fwd node
+A->B->C->D->E...
+Head           Tail 
+each node has (val,next pointer)
+Doubly linked list: each node has (val, prev, next):
+A<->B<->C<->D...
+-> Insertion of new node in-between/Deletion of exisiting node from in-between: TC = O(1) bcoz we just need to change some pointers. This makes LL>Array (efficient deletion/insertion in-b/w) but Array>LL(accessing an in-b/w element = O(1) in array & = O(n) in LL), LL is memory efficient bcoz we allot only the amount of memory we are using(dynamic memory allocation) while for array, we have to allocate a  fixed amount of memory beforehand, which may never be used.
+
+........................................................
+QUEUE: FIFO
+pushAtTail(enqueue) & popFromHead(dequeue) -> TC = O(1)
+peek() => head value
+implemetation code: 
+    class queue{
+        constructor() {
+            this.items = [];
+        }
+
+        enqueue(element){
+            this.items.push(element);
+        }
+
+        dequeue(){
+            if(this.isEmpty()){
+                return "underflow";
+            }
+            return this.items.shift;
+        }
+        peek(){
+            if(this.isEmpty()) return "Queue is Empty";
+            return this.items[0];
+        }
+        isEmpty(){
+            return this.items.length === 0;
+        }
+        size(){
+            return this.items.size();
+        }
+    }
+
+.........................................................
+STACKS: LIFO 
+pushAtHead(enqueue) & popFromHead(dequeue) -> TC = O(1) , peek() => head value ->O(1)
+
+..........................................................
+ARRAYLIST: Dynamic Array
+whenever length==capacity => capacity doubles
+push/pop=> O(1), shift/unshift i.e., queue/dequeue  => O(n)
+..........................................................
+RECURSION: 
+Base Case(s)
+Pre, Recursion call, Post 
+..........................................................
+QUICK SORT: Divide & Conquer -> TC = O(nlogn) but rare case: O(n^2) for reverse sorted array & initial pivot element = last element(Smallest element)
+->Divide & Conquer Algo : Find index of Pivot element & put pivot element at its correct sorted index, ie, Pivot index and then sort left and right arrays
