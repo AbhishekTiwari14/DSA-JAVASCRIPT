@@ -1,0 +1,63 @@
+TC:
+->O(1>logN>N>NlogN>N*2)
+
+Objects: 
+->Insert, Delete, Access -> O(1) but Search -> O(N)
+->Object Methods: Object.keys(), .values(), .entries() -> O(N), objName.hasOwnProperty("keyName") -> O(1)
+
+Arrays:
+-> Insert, Delete -> O(N)(except when done at last index ,ie, push/pop), Access -> O(1), Search -> O(1)
+-> Array Methods -> puh, pop -> O(1), sort -> O(N*logN), others(shift,unshift,concat,slice,splice,forEach,map,reduce,filter,indexOf,includes,etc.)-> O(N) 
+
+.........................................................................
+COMMON PATTERNS:
+
+(1) Frequency Counter:
+->  using hashmap/object/set to store frequeny of elements where elements = keys & their frequencies(count of no. of appearances of particular key) as values
+-> Makes TC: O(N^2) To TC: O(N) + SC: O(N) 
+
+(2) Multiple Pointers: 
+-> two pointers: i, j: TC: O(N^2) -> O(N), SC: O(1)
+
+(3) Sliding Window: 
+-> create initial window of a particular size & keep sliding the window untill end of array while maintating the same size of window.
+-> specially useful for Qs. involving subarray/substring 
+-> Makes TC: O(N^2) -> O(N) & SC: O(1)
+
+(4) Divide & Conquer: Ex.) Binary Search: TC: O(N) -> O(logN)
+
+..........................................................................
+RECURSION:
+
+-> Base Case(s) & Recursive fxn. calls
+-> usecase: json.stringify()/parse(), DOM Traversal, Object Traversal uses recursion under-the-hood
+-> Helper fxn.(separate fxn. to execute recursion) can be used to improve readabililty
+
+...........................................................................
+SEARCHING ALGOS:
+
+-> Linear Search: simple for loop -> TC: O(N)
+-> Binary Search: Only works for "SORTED" arrays. Eliminates half of search space(left side or right side of mid) on each iteration. It is based on divide & conquer algo. TC: O(logN)
+
+............................................................................
+SORTING ALGOS:
+
+-> Bubble Sort: TC: O(N^2). Adjacent values comparison. On each iteration, largest element gets into its sorted index at each inner loop traversal. Best case TC(already sorted array) = O(N)
+-> Selection Sort: TC: O(N^2). Same as bubble sort but here the smallest element gets into its sorted index at each inner loop traversal
+-> Insertion Sort: TC: O(N^2). Each inner loop traversal makes the left portion of current element(including itself) sorted. Best case TC(already sorted array) = O(N)
+
+-> Merge Sort: TC: O(N*logN), SC: O(N). Divide & Conquer/Merge Algo. keep dividing array into 2 parts(from mid) untill each subarray has just 1 element. Now, while retracing the tree path, merge the two already sorted subarrays(bcoz array containing 1 element is always sorted) in a sorted manner.
+
+-> Quick Sort: TC: O(N*logN), SC: O(N). Same as Merge Sort. Find index of Pivot element(take first element of array as PE) & put pivot element at its correct sorted index, ie, Pivot index and make sure that all elements to the left of PE are less than PE & to the right are >PE.TC = O(nlogn) but rare case: O(n^2) for already sorted array
+
+-> Radix/Bucket Sort: TC: O(n*m) where n=no. of elements, m = max no. of digits of an element in arr, SC: O(n+m). Used only for array of integers. Does digit classifications(moving from R->L) into buckets of [0-9] and sorts the nos. a/c to their bucket classification.
+
+.......................................................................
+
+-> class = blueprint of objects with pre-defined properties & methods.
+-> static methods apply to the class & not the instances of the class(ie, objects) 
+
+........................................................................
+LINKED LIST: 
+-> Non-contegous DS. Each node stores (data, next) where next = pointer to next node. 
+-> Insertion/Deletion: O(1) (even in-b/w)
