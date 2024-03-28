@@ -59,5 +59,9 @@ SORTING ALGOS:
 
 ........................................................................
 LINKED LIST: 
+-> TC: Insertion/Deletion at head: O(1), Search/access: O(N).
 -> Non-contegous DS. Each node stores (data, next) where next = pointer to next node. 
--> Insertion/Deletion: O(1) (even in-b/w)
+-> Array v/s LL: Insertion/Deletion at head: LL=>O(1), array=>O(N); Search/access: LL=>O(N), array=>O(1).
+-> push=> insert at tail, pop=> remove from tail, unshift=> insert at head, shift=> remove from head  
+
+.........................................................................
