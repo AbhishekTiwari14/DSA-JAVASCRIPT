@@ -65,3 +65,15 @@ LINKED LIST:
 -> push=> insert at tail, pop=> remove from tail, unshift=> insert at head, shift=> remove from head  
 
 .........................................................................
+STACKS:
+-> TC: Insertion/Removal: O(1), Search/Access: O(N)
+-> LIFO(Last In First Out).
+
+QUEUES:
+-> TC: Insertion/Removal: O(1), Search/Access: O(N)
+-> FIFO(First In First Out)
+
+.........................................................................
+BINARY TREES:
+-> TC:
+-> Terminologies: (1) Root = Top Node of Tree; (2) Leaf = Node with no child; (3) Edge = Line connecting parent with its children 
