@@ -76,4 +76,15 @@ QUEUES:
 .........................................................................
 BINARY TREES:
 -> TC:
--> Terminologies: (1) Root = Top Node of Tree; (2) Leaf = Node with no child; (3) Edge = Line connecting parent with its children 
+-> Terminologies: (1) Root = Top Node of Tree; (2) Leaf = Node with no child; (3) Edge = Line connecting parent with its children
+-> Binary Tree => Each parent can have atmost 2 children
+->  BST(Binary Search Tree) = Speacial case of BT where For each node, all elements in its left subtree are less than the node's value, and all elements in its right subtree are greater than the node's value. This property ensures that the elements in the tree are stored in a "sorted" order.
+-> BFS(Breadth First Search/Traversal): 
+-> DFS(Depth First Search/Traversal):  (1)Preorder: Root,Left,Right (2)InOrder: Left,Root,Right (3)Postorder: Left,Right,Root
+-> TC of BFS & DFS = SAME = O(N) (ie, worst case, we have to traverse the whole tree). SC: for a wide tree SC(BFS<DFS) & for a deep tree SC(BFS>DFS)
+........................................................................
+BST:
+-> TC: Insertion: O(logN); Search: O(logN) but worst case TC: O(N) when BST = LL.
+
+...................................................................................
+BINARY HEAPS:
