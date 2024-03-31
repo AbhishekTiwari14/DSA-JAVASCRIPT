@@ -88,7 +88,7 @@ BST:
 -> The siblings are always in ascending order(leftmost sibling = smallet & rightmost sibling = largest)
 ...................................................................................
 BINARY HEAPS:
--> TC: Insertion/Deletion: O(logN), Search: O(N)
+-> TC: Insertion/Deletion: O(logN) (No worst caseee of O(N) bcoz it is tightly packed & != LL), Search: O(N)
 -> Similar to BST (max 2 children)
 -> MaxBinaryHeap: Parent Node > All Child Nodes
 -> MinBinaryHeap: Parent Node < All Child Nodes
@@ -100,3 +100,14 @@ BINARY HEAPS:
 Priority Queue:
 -> Data Structure where elements are arranged in the order of their value(or some other parameter & not value).
 -> Each node has {val, prority}; prority = 1 => highest priority. So we create priority queue using ,MinHeap where position of node is decided by priority.  
+
+..................................................................
+HASHMAP:
+-> Insertion/Deletion/Access: O(1)
+-> Data Strucutre to store KEY:VALUE pairs.
+-> Same as object, but in object -> Key must be string, which is not the case in hashmap
+-> "String".charCodeAt(0) => unicode of string[0] = unicode of 'S' = 83
+-> Char Codes: '0'-'9' => 49-57; 'A'-'Z' => 65-90; 'a'-'z' => 97-122
+-> our hash fxn. sums up unicodes of each char in key and hashes the key with an index
+-> Dealing with collisions: collision is when a key gets hashed to the index where another key:value pair is already stored. There are 2 methods to overcome it: (M1) Linear Probing: Searches for the nearest index ahead which has no data so as to store this key:value pair there. 
+(M2): Separate Chaining: If 2 or more keys hash to same index, the key:value pairs at that index are stored as nested array. ex. arr[2] = [["k1", v1], ["k2", v2], ["k3", v3]]; 
