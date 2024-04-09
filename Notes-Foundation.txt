@@ -111,3 +111,17 @@ HASHMAP:
 -> our hash fxn. sums up unicodes of each char in key and hashes the key with an index
 -> Dealing with collisions: collision is when a key gets hashed to the index where another key:value pair is already stored. There are 2 methods to overcome it: (M1) Linear Probing: Searches for the nearest index ahead which has no data so as to store this key:value pair there. 
 (M2): Separate Chaining: If 2 or more keys hash to same index, the key:value pairs at that index are stored as nested array. ex. arr[2] = [["k1", v1], ["k2", v2], ["k3", v3]]; 
+
+.................................................................
+GRAPHS:
+-> TC: add vertex/add edge: O(1); remove edge: O(E); remove vertex/bfs/dfs: O(V+E); finding neighbor/checking if an edge exists: O(V); SC: O(V+E); V = no. of vertices, E = no. of edges 
+-> Data Structure which consists of bunch of nodes and connections between them
+-> Terminologies: (1) Vertex = Node; (2) Edge = connections b/w nodes 
+(3) Weighted/Unweighted => values assigned/not assigned to  edges(ex. distance b/w nodes are assigned in google map)
+(4) Directed/Undirected => direction assigned/not assigned to movement on edges. (Ex.) undirected graph: A-B => We can go from A to B as well as B to A but directed graph: A->B => We cannot go from B to A  
+-> There are 2 methods in which we can store connections b/w vertices. (1) Adjacency Matrix: n*n(n = no. ov vertices) matrix in which matrix[i][j] = 1 => i connects to j & matrix[i][j] = 0 => no direct connection b/w i & j. (2) Adjacency List: If vertices are inteeger(0,1,2...)then, we can have array of arrays where index => vertex & arr[i] = [2,3,6] => vertex 'i' connects to vertices 2,3&4 OR if vertices are not integers, then a hashmap where key = vertex & its value = array of all the vertices wihich it connects to. 
+
+................................................................
+DIJKSTRA's ALGO:
+->
+->finds shortest path between two vertices of a graph
